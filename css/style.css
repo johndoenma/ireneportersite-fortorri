@@ -1,0 +1,576 @@
+/* #BASE CSS (Initital Setup)
+---------------------------------
+    #BASE CONTENT
+        #TYPOGRAPHY
+            #BODY
+            #HEADINGS
+            #PARAGRAPHS
+            #LINKS
+            #HELPERS
+        #MEDIA
+            #IMAGES
+        #COMPONENTS
+            #BUTTONS
+    #BASE LAYOUT
+        #SIMPLE RESET
+        #MEDIAQUERIES
+        #CONTAINER
+        #GRID SYSTEM
+            #CLEARFIX
+    #BASE SITE
+        #SITE STRUCTURE
+            #HEADER
+                # site-id (LOGO)
+            #FOOTER
+            #SECTIONS
+            #SUB PAGES
+        #SITE NAVIGATION
+            #TOGGLE-NAV (Default for Small Screens)
+--------------------------------- */
+
+/* TYPEOGRAPHY - BASE BODY */
+
+body {
+    font-size: 16px; 
+    font-family: freight-sans-pro, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.5;
+    color: rgba(0,0,0,.8);
+    background-color: #F4F4F6;
+}
+
+/* HEADINGS */
+/* 
+    Based on an awesome type scale
+    81px, 54px, 36px, 24px, 16px (base), 10.67px 
+*/
+
+h1,h2,h3,h4,h5,h6{
+    margin: .5em 0;
+    font-family: garamond-premier-pro, serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+h1 {
+    font-size: 5.063em; 
+    line-height: 1;
+}
+h2 {
+    font-size: 3.375em; 
+    line-height: 1.1;
+}
+h3 {
+    font-size: 2.25em; 
+    line-height: 1.2;
+}
+h4 {
+    font-size: 1.5em;
+    line-height: 1.3;
+}
+
+
+/* PARAGRAPHS */
+p{
+    margin: .5em 0;
+    max-width: 36em;
+}
+
+/* LINKS */
+A{
+    color: rgba(0,0,180,.9);
+    text-decoration: none;
+}
+
+a:hover{
+    color: rgba(0,0,180,1);
+    text-decoration: underline;
+}
+
+/* HELPER CLASSES*/
+
+.text-centered{
+    text-align: center;
+}
+
+.full-width{
+    max-width: none;
+}
+
+/* IMAGES */
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.trophy-icon{
+    max-width: 36%;
+}
+
+/* BUTTONS */
+
+.button, 
+button, 
+form input[type="submit"] {
+    font-size: inherit;
+    line-height: 1;
+    background-color: #519872;
+    color: rgba(255,255,255,1);
+    padding: 1em;
+    display: inline-block;
+    margin: .5em, .5em, .5em, .5em;
+    text-align: center;
+    border-radius: 20px;
+    border: 1px solid #519872;
+    transition: ease-out 0.3s;
+}
+
+.button:hover, 
+button:hover, 
+form input[type="submit"]:hover{
+    background-color: #F4F4F6;
+    border-color: #519872;
+    color: #519872;
+    text-decoration: none;
+
+
+}
+
+.button-alt,
+form input[type="submit"].button-alt {
+    color: #519872;
+    background-color: #F4F4F6;
+    border: 1px solid #519872;
+    transition: ease-out 0.3s;
+}
+
+.button-alt:hover,
+form input[type="submit"].button-alt:hover {
+    background-color: #26553c;
+    color: #F4F4F6;
+
+}
+
+/* LAYOUT */
+
+/* SIMPLE RESET */
+* {box-sizing: border-box;}
+body{ margin: 0;}
+
+/* CONTAINER */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 768px) {
+    /* TABLET SIZED STYLING WOULD GO HERE */
+}
+
+@media (min-width: 1050px) {
+    body {
+    font-size: 100%;
+    }
+}
+
+@media (min-width: 1250px) {
+    body{
+        font-size: 112.5%;
+    }
+    .container {
+        /* max-width: 1200px; */
+    }
+}
+
+/* FOR DEMO PURPOSES ONLY */
+body.demo{
+    padding-top: 2em;
+}
+body.demo::before {
+    content: "Small Screen (Mobile) Less Than 768px";
+    background-color:blanchedalmond;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    text-align: center;
+    padding: .5em;
+    color: black
+}
+
+@media (min-width: 768px) {
+    body.demo::before {
+        content: "Midsize Screen (Tablet) 768px-1050px";
+        background-color:rgb(252, 219, 164);
+    }
+}
+
+@media (min-width: 1050px) {
+    body.demo::before {
+        content: "Large Screen (Notebook) 1050px-1250px";
+        background-color:lightsalmon;
+    }
+}
+
+@media (min-width: 1250px) {
+    body.demo::before {
+        content: "Extra-Large Screen (Desktop) Greater than 1250px";
+        background-color:tomato;
+    }
+}
+
+/* Semantic Grid System */
+
+.row > .column {
+    margin-bottom: 4%;
+}
+
+@media (min-width: 768px) {
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+        margin-left: -2%;
+        margin-right: -2%;
+    }
+    .row > .column{
+        flex-grow: 1;
+        margin-left: 2%;
+        margin-right: 1%;
+    }
+    .row > .column.one-half{
+        max-width: 46%;
+    }   
+    .row > .column.one-third{
+        max-width: 29.333%;
+    }
+    .row > .column.two-thirds{
+        max-width: 62.666%;
+    }
+    .row > .column.one-fourth{
+        max-width: 21%;
+    }
+    .row > .column.centered{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* FOR DEMO PURPOSES ONLY */
+.demo .column {
+    background: rgba(0,0,0,.2);
+    padding: .5em;
+    text-align: center;
+}
+
+/* SITE STRUCTURE */
+
+
+/* SITE HEADER */
+.site-header {
+    padding: 17.5px 0;
+    background-color: #E6E6E9;
+}
+
+/* ON LARGER SCREENS PLACE LOGO LEFT, PLACE NAV RIGHT */
+@media (min-width: 768px) {
+    .site-header .container{
+        display:flex;
+        justify-content: space-between;
+
+    }
+}
+/* STYLING FOR HEADER AND FOOTER */
+.site-header a,
+.site-footer a {
+    color: rgba(0,0,0,.8);
+}
+
+.site-header a:hover,
+.site-footer a:hover {
+    color: rgba(0,0,0,1);
+    text-decoration: none;
+}
+
+/* LOGO AREA */
+.site-id h1{
+    font-size: 1.5em;
+    margin: 0;
+    padding-top: .6em;
+    text-align: center;
+}
+
+/* SITE NAV */
+
+.site-nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    font-size: 1em;
+}
+
+.site-nav li{
+
+}
+
+.site-nav a{
+    padding: 1em;
+    display: block;
+}
+
+.site-nav .menu-button {
+    display: none;
+}
+/* SITE MAIN
+.site-main{
+    background-color: rgba(0,255,0,.2);
+} */
+
+/* SECTIONs */
+section{
+    padding: 3em 0;
+}
+
+/* HERO */
+
+.hero {
+    padding: 6em 4%;
+    text-align: center;
+}
+
+.hero h1, 
+.hero p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* TOGGLE NAV */
+@media (max-width: 767px) {
+    .toggle-nav .site-id{
+        position: absolute;
+    }
+    .toggle-nav .site-nav {
+        text-align: right;
+    }
+    .toggle-nav .site-nav .menu-button{
+        display: block;
+        display: inline-block;
+        cursor: pointer;
+        padding: .3em .8em;
+        margin-bottom: .8em;
+    }
+    .toggle-nav .site-nav .menu-button::selection{
+        background-color: rgba(255,255,255,0);
+    }
+    .toggle-nav .site-nav ul{
+        display: block;
+        text-align: center;
+    }
+    .toggle-nav .site-nav a:hover{
+        background-color: rgba(0,0,180,1);
+        color: white;
+    }
+    .toggle-nav[data-navstate="closed"] ul {
+        height: 0;
+        overflow: hidden;
+    }
+    .toggle-nav[data-navstate="open"] ul {
+        height: auto;
+        overflow: visible;
+    }
+
+    /* NAVICON */
+    .toggle-nav .site-nav .menu-button.navicon{
+        color: rgba(255,255,255,0);
+        padding:0;
+    }
+    .toggle-nav .site-nav .menu-button.navicon::after{
+        content: "\2630";
+        display: inline-block;
+        padding: 0 .8em;
+        margin: 0;
+        color: rgba(0,0,0,.8);
+        font-size: 1.5em;
+    }
+    .toggle-nav[data-navstate="open"] .site-nav .menu-button.navicon::after {
+        content: "\2715";
+    }
+}
+
+/* SubPages */
+
+article {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+article h1, h2.subhead, .date {
+    text-align: center;
+}
+
+article h2.subhead {
+    font-weight: normal;
+    font-size: 1.5em;
+    line-height: 1.2;
+    opacity: .7;
+}
+
+article .date {
+    font-size: .75em;
+    opacity: .5;
+    margin-bottom: 3em;
+}
+
+article p + h2,
+article p + h3,
+article p + h4,
+article p + h5,
+article p + h6 {
+    margin-top: 1.5em;
+}
+
+article p:first-of-type {
+    font-size: 1.4em;
+    line-height: 1.3;
+}
+
+/* FORMS */
+
+form {
+    max-width: 600px;
+    margin: 2em auto;
+}
+
+form label,
+form input,
+form textarea{
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    font-size: 1em;
+}
+
+form label {
+    margin-top: 1em;
+    margin-bottom: 0.25em;
+}
+
+form input[type="text"],
+form textarea{
+    border: 1px solid #ccc;
+    padding: .5em;
+    color: #666;
+}
+
+form textarea{
+min-height: 10em;
+line-height: 1.5;
+}
+
+form input[type="submit"] {
+    width: auto;
+    margin-top: 1.5em;
+    margin-bottom: 0.25em;
+
+}
+
+/* Custom Site CSS */
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+.section-title::after{
+    content: "";
+    display: block;
+    width: 100px;
+    margin: .5em auto;
+    border-bottom: 3px solid rgba(0,0,0,.2);
+}
+
+#contact {
+    background-color: #519872;
+}
+
+/* hero grid */
+.grid-hero {
+    position: relative;
+    padding: 3em 0;
+}
+
+.hero-image {
+    display: block;
+    margin: 0 auto;
+}
+
+.grid-hero .big-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+}
+
+.grid-hero .small-header {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    margin: 0;
+}
+
+.grid-hero .button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+}
+
+/* Testimonials */
+
+/* .tullia-test {
+    color: red;
+    display: flexbox;
+}
+
+.adam-test {
+    color: blue;
+    display: flexbox;
+}
+
+.thoko-test {
+    color: green;
+    display: flexbox;
+} */
+
+.circlebox {
+    background: rgba(0,0,0,.1);
+    border-radius: 100%;
+    width: 15em;
+    height: 15em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1em;
+    margin: 0 auto;
+}
+
+/* ABOUT */
+
+/* BESPOKE TWO COLUMN LAYOUT FOR THE ABOUT SECTION
+#about .container {
+    justify-content: space-between;
+    color: red;
+    display: flex;
+}
+
+#about .textwrapper {
+    padding: 2em;
+}
+ */
