@@ -57,7 +57,6 @@
     <section id="about">
       <div class="container">
 
-        <!-- REUSABLE GRID SOLUTION -->
         <div class="row">
           <div class="one-half column">
             <h3>Meet the Coach</h3>
@@ -66,26 +65,22 @@
               mother, and inspiring writer, but it didn't come easily. I've gone through hundreds of failures and
               complicated situations. You can use my previous experience in order to avoid the same traps.</p>
           </div>
-          <div class="two-half column">
+
+          <div class="one-half column">
             <img class="about-image" src="img/irena-porter-about.jpg"
               alt="Photo of Irena Porter sitting in a chair holding a notepad">
           </div>
         </div>
 
-        <!-- BESPOKE SOLUTION -->
-        <!-- <div class="textwrapper">
-          <h3>Meet the Coach</h3>
-          <p>Hello! I'm Irena, a certified coach, best-selling author and a passionate speaker. I've found balance
-            between work and life, and it has resulted in quite the transformation. I'm a totally happy person, loving
-            mother, and inspiring writer, but it didn't come easily. I've gone through hundreds of failures and
-            complicated situations. You can use my previous experience in order to avoid the same traps.</p>
-        </div>
-        <div class="imagewrapper">
-          <img class="about-image" src="img/irena-porter-about.jpg"
-            alt="Photo of Irena Porter sitting in a chair holding a notepad">
-        </div> -->
 
+        <!-- <div class="text-wrapper">
+              <h3>Meet the Coach</h3>
+              <p>Hello! I'm Irena, a certified coach, best-selling author and a passionate speaker. I've found balance between work and life, and it has resulted in quite the transformation. I'm a totally happy person, loving mother, and inspiring writer, but it didn't come easily. I've gone through hundreds of failures and complicated situations. You can use my previous experience in order to avoid the same traps.</p>
+            </div>
 
+            <div class="imagewrapper">
+              <img class="about-image" src="img/irena-porter-about.jpg" alt="Photo of Irena Porter sitting in a chair holding a notepad">
+            </div> -->
       </div>
     </section>
 
@@ -93,31 +88,33 @@
       <div class="container">
 
         <h3>Client Testimonials</h3>
-
         <div class="row">
           <div class="one-third column">
-            <div class="circlebox">
+            <div class="circle-box">
               <h4>Tullia Cook</h4>
               <p>“Irena provided me with valuble advice and support that helped me with a major transition.”</p>
             </div>
           </div>
+
           <div class="one-third column">
-            <div class="circlebox">
+            <div class="circle-box">
               <h4>Adam Askes</h4>
               <p>“I look forward to continuing to work with Ireana and learn more in the coming months.”</p>
             </div>
           </div>
+
           <div class="one-third column">
-            <div class="circlebox">
+            <div class="circle-box">
               <h4>Thoko Fornier</h4>
               <p>“I highly recommend Irena's services to anyone making changes in their lives.”</p>
             </div>
           </div>
+
         </div>
 
-
-
-        <a class="scroll button button-alt" href="#">Read Reviews</a>
+        <div class="text-centered">
+          <a class="scroll button button-alt" href="#">Read Reviews</a>
+        </div>
 
       </div>
     </section>
@@ -144,27 +141,34 @@
       <div class="container">
         <h3 class="section-title">Contact Us</h3>
 
-        <form>
-          <label for="contact_name">Name:</label>
-          <input type="text" id="contact_name" name="contact_name" />
+        <div class="parent-contact">
 
-          <label for="email">Email Address:</label>
-          <input type="text" id="contact_email" name="contact_email" />
+          <form>
 
-          <label for="contact_message">Message:</label>
-          <textarea id="contact_message" name="contact_message"></textarea>
+            <label for="contact_name">Name:</label>
+            <input type="text" id="contact_name" name="contact_name" />
 
-          <input type="submit" value="Submit" class="button-alt" />
+            <label for="email">Email Address:</label>
+            <input type="text" id="contact_email" name="contact_email" />
 
-        </form>
+            <label for="contact_message">Message:</label>
+            <textarea id="contact_message" name="contact_message"></textarea>
 
-        <nav class="social-nav">
-          <ul>
-            <li><a href="#">Linkedin</a></li>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Instagram</a></li>
-          </ul>
-        </nav>
+            <div class="text-right">
+              <input type="submit" value="Submit" class="button-alt" />
+            </div>
+
+          </form>
+
+          <nav class="social-nav">
+            <ul>
+              <li><a href="#" class="icon-social icon-linkedin">Linkedin</a></li>
+              <li><a href="#" class="icon-social icon-facebook">Facebook</a></li>
+              <li><a href="#" class="icon-social icon-instagram">Instagram</a></li>
+            </ul>
+          </nav>
+
+        </div>
 
       </div>
     </section>
@@ -174,29 +178,37 @@
   <footer class="site-footer">
     <div class="container">
 
-      <nav class="site-nav">
-        <ul>
-          <li><a class="scroll" href="#about">about</a></li>
-          <li><a class="scroll" href="#testimonials">testimonials</a></li>
-          <li><a class="scroll" href="#services">services</a></li>
-          <li><a class="scroll" href="#contact">contact</a></li>
-        </ul>
-      </nav>
+      <div class="row">
+        <div class="column one-third">
+          <nav class="site-nav">
+            <ul>
+              <li><a class="scroll" href="#about">about</a></li>
+              <li><a class="scroll" href="#testimonials">testimonials</a></li>
+              <li><a class="scroll" href="#services">services</a></li>
+              <li><a class="scroll" href="#contact">contact</a></li>
+            </ul>
+          </nav>
+        </div>
 
-      <nav class="social-nav">
-        <ul>
-          <li><a href="#">Linkedin</a></li>
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">Newsletter</a></li>
-        </ul>
-      </nav>
+        <div class="column one-third">
+          <nav class="social-nav">
+            <ul>
+              <li><a href="#">Linkedin</a></li>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">Newsletter</a></li>
+            </ul>
+          </nav>
+        </div>
 
-      <nav class="site-nav">
-        <ul>
-          <li><a class="scroll" href="#top">back to top^</a></li>
-        </ul>
-      </nav>
+        <div class="column one-third">
+          <nav class="site-nav">
+            <ul>
+              <li><a class="scroll" href="#top">back to top^</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
 
     </div>
   </footer>

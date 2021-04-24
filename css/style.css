@@ -94,6 +94,10 @@ a:hover{
     text-align: center;
 }
 
+.text-right{
+    text-align: right;
+}
+
 .full-width{
     max-width: none;
 }
@@ -110,9 +114,9 @@ img{
 
 /* BUTTONS */
 
-.button, 
-button, 
-form input[type="submit"] {
+.button,
+ button, 
+ form input[type="submit"] {
     font-size: inherit;
     line-height: 1;
     background-color: #519872;
@@ -147,7 +151,7 @@ form input[type="submit"].button-alt {
 
 .button-alt:hover,
 form input[type="submit"].button-alt:hover {
-    background-color: #26553c;
+    background-color: #519872;
     color: #F4F4F6;
 
 }
@@ -256,6 +260,7 @@ body.demo::before {
         margin-left: auto;
         margin-right: auto;
     }
+
 }
 
 /* FOR DEMO PURPOSES ONLY */
@@ -443,7 +448,8 @@ article p:first-of-type {
 
 form {
     max-width: 600px;
-    margin: 2em auto;
+    /* margin: 2em auto; */
+    width: 100%;
 }
 
 form label,
@@ -507,6 +513,8 @@ form input[type="submit"] {
 .hero-image {
     display: block;
     margin: 0 auto;
+    max-width: 60%;
+    max-height: 70vh;
 }
 
 .grid-hero .big-header {
@@ -514,6 +522,8 @@ form input[type="submit"] {
     top: 0;
     left: 0;
     margin: 0;
+    font-size: clamp(2.5em, 6vw, 5em);
+    line-height: 1;
 }
 
 .grid-hero .small-header {
@@ -521,6 +531,8 @@ form input[type="submit"] {
     top: 10%;
     left: 10%;
     margin: 0;
+    font-size: clamp(2em, 5vw, 5em);
+    line-height: 1;
 }
 
 .grid-hero .button {
@@ -532,23 +544,8 @@ form input[type="submit"] {
 
 /* Testimonials */
 
-/* .tullia-test {
-    color: red;
-    display: flexbox;
-}
-
-.adam-test {
-    color: blue;
-    display: flexbox;
-}
-
-.thoko-test {
-    color: green;
-    display: flexbox;
-} */
-
-.circlebox {
-    background: rgba(0,0,0,.1);
+.circle-box{
+    background: #E6E6E9;
     border-radius: 100%;
     width: 15em;
     height: 15em;
@@ -559,18 +556,102 @@ form input[type="submit"] {
     text-align: center;
     padding: 1em;
     margin: 0 auto;
+
+}
+
+#testimonials .button {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* ABOUT */
 
-/* BESPOKE TWO COLUMN LAYOUT FOR THE ABOUT SECTION
-#about .container {
+/* BESPOKE */
+/* #about .container {
     justify-content: space-between;
-    color: red;
     display: flex;
+    align-self: flex-start;
 }
 
-#about .textwrapper {
+#about .text-wrapper {
     padding: 2em;
+} */
+
+
+/* footer */
+
+.site-footer .column {
+    display: flex;
+    justify-content: flex-end;
 }
- */
+
+.site-footer ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.site-footer a {
+    padding: 1em;
+    display: block;
+}
+
+/* SOCIAL NAV ICONS */
+
+.social-nav ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.social-nav a{
+    padding: 1em;
+    margin: 0.5em;
+    display: block;
+}
+
+.social-nav a.icon-social{
+    width: 80px;
+    height: 0;
+    padding: 0;
+    padding-top: 80px;
+    overflow: hidden;
+    background-size: contain;
+}
+
+.social-nav .icon-linkedin {
+    background-image: url(https://cdn1.iconfinder.com/data/icons/social-media-circle-7/512/Circled_Linkedin_svg-512.png);
+}
+
+.social-nav .icon-facebook {
+    background-image: url(https://cdn1.iconfinder.com/data/icons/social-media-circle-7/512/Circled_Facebook_svg-512.png);
+}
+
+.social-nav .icon-instagram {
+    background-image: url(https://cdn1.iconfinder.com/data/icons/social-media-circle-7/512/Circled_Instagram_svg-512.png);
+}
+
+/* SERVICES */
+
+#services .container{
+  text-align: center;
+}
+
+
+/* CONTACT SECTION */
+
+@media (min-width: 768px) {
+    .parent-contact {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+}
+
+#contact .social-nav {
+    margin: 0 2em;
+}
